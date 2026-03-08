@@ -1,76 +1,161 @@
-# Customer Churn Prediction ML Pipeline
+Customer Churn Prediction ML Pipeline
 
- Overview
+This project implements a machine learning pipeline to predict customer churn using the Telco Customer Churn dataset.
 
-This project builds a machine learning pipeline to predict customer churn using the Telco Customer Churn dataset.
+Customer churn prediction helps telecom companies identify customers likely to leave their services, allowing them to take proactive retention measures.
 
-The pipeline performs:
+The project demonstrates a modular ML pipeline architecture including data preprocessing, model training, evaluation, and prediction.
 
-- Data loading
-- Data preprocessing
-- Model training
-- Model evaluation
-- Churn prediction
+#Problem Statement:
 
-The goal is to identify customers likely to leave the service so businesses can take preventive actions.
+Customer churn is a major challenge for telecom companies because losing customers directly affects revenue.
 
-# Project Structure
+Using machine learning, companies can:
 
-customer_churn_project
+Identify customers likely to churn
+
+Understand key factors influencing churn
+
+Improve customer retention strategies
+
+
+#Dataset:
+
+The dataset used is the Telco Customer Churn dataset, which contains customer information such as:
+
+customer demographics
+
+service subscriptions
+
+contract type
+
+billing details
+
+churn status
+
+#Exploratory Data Analysis:
+
+Churn Distribution
+
+The dataset shows a class imbalance, where most customers do not churn.
+
+Machine Learning Pipeline Architecture
+
+The project follows a modular machine learning pipeline design.
+
+#Pipeline Steps:
+
+Data Loading
+
+Data Preprocessing
+
+Train-Test Split
+
+Model Training
+
+Model Evaluation
+
+Prediction
+
+#Model Training:
+
+The project uses Random Forest Classifier for churn prediction.
+
+Reasons for choosing Random Forest:
+
+Works well with tabular data
+
+Handles nonlinear relationships
+
+Provides feature importance
+
+Robust against overfitting
+
+#Model Evaluation:
+
+Model performance is evaluated using a confusion matrix.
+
+This helps understand:
+
+True Positives
+
+True Negatives
+
+False Positives
+
+False Negatives
+
+#Feature Importance:
+
+Feature importance helps identify which features influence churn prediction the most.
+
+Key factors affecting churn include:
+
+TotalCharges
+
+MonthlyCharges
+
+tenure
+
+Contract type
+
+Payment method
+
+#Project Structure:
+
+customer_churn_ml_pipeline
 │
-├── artifacts/
-│ └── churn_model.pkl
-
-├── data/
-│ └── churn.csv
-
-├── pipeline/
-│ └── training_pipeline.py
-
-├── src/
-│ ├── data_loader.py
-│ ├── preprocessing.py
-│ ├── model_training.py
-│ └── model_evaluation.py
-
 ├── main.py
-└── predict.py
+├── predict.py
+├── data_loader.py
+├── preprocessing.py
+├── model_training.py
+├── model_evaluation.py
+│
+├── churn.csv
+├── churn_model.pkl
+├── requirements.txt
+│
+└── images
+    ├── dataset_preview.png
+    ├── churn_distribution.png
+    ├── confusion_matrix.png
+    ├── feature_importance.png
+    └── ml_pipeline_architecture.png
 
-#Technologies Used
+   #Installation
+    git clone https://github.com/E23BCAU0091/customer_churn_ml_pipeline.git
+    cd customer_churn_ml_pipeline
+    #Install dependencies:
+    pip install -r requirements.txt
 
-- Python
-- Pandas
-- Scikit-learn
-- Joblib
+   Run the pipeline:
+    python main.py
+    python predict.py
 
-# How to Run the Project
+ #Technologies Used
 
-Clone the repository:
-git clone https://github.com/your-username/customer_churn_ml_pipeline.git
-```
+    -Python
 
-Install dependencies:
+    -Pandas
 
-```
-pip install -r requirements.txt
-```
+    -NumPy
 
-Run the training pipeline:
+    -Scikit-learn
 
-```
-python main.py
-```
+    -Matplotlib
 
-Run prediction:
+ #Future Improvements
 
-```
-python predict.py
-```
+    Hyperparameter tuning
 
-# Model Used
+    Model deployment using Flask or FastAPI
 
-Random Forest Classifier
+    Real-time churn prediction API
 
-## Author
+    Dashboard visualization
+
+    Author
 
 Harshita Jain
+Data Science Student
